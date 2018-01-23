@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib as mpl
 mpl.use('pgf')
 import matplotlib.pyplot as plt
+from cycler import cycler
 
 
 
@@ -70,7 +71,7 @@ def latexify(fig_width=None, fig_height=None, columns=1):
 							 'axes.facecolor': "white",
 							'figure.dpi': 600,
 							'lines.linewidth':0.75,
-							'axes.color_cycle':dark_colors,
+							'axes.prop_cycle':cycler('color', dark_colors), 
 							'figure.figsize': [fig_width,fig_height],
 							'font.family': 'serif',
 							"font.serif": [], 
